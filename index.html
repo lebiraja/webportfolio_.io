@@ -9,13 +9,14 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #DDDDDD;
-            color: #333;
+            background-color: #F0F2F5;
+            color: #1F2937;
             line-height: 1.6;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
         header {
-            background-color: #001f3f;
+            background-color: #1F2937;
             color: #FFFFFF;
             padding: 2rem 1rem;
             text-align: center;
@@ -32,13 +33,14 @@
             overflow: hidden;
             border: 5px solid #FFFFFF;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
         }
         .profile-container {
             position: relative;
             top: 20px;
         }
         nav {
-            background-color: #2ECC40;
+            background-color: #3B82F6;
             padding: 1rem;
         }
         nav ul {
@@ -51,23 +53,24 @@
             margin: 0 1rem;
         }
         nav ul li a {
-            color: #001f3f;
+            color: #F0F2F5;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #FFDC00;
+            color: #FBBF24;
         }
         section {
             padding: 2rem;
             margin: 2rem 0;
             background-color: #FFFFFF;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
         }
         section h2 {
-            color: #001f3f;
-            border-bottom: 2px solid #FFDC00;
+            color: #1F2937;
+            border-bottom: 2px solid #FBBF24;
             display: inline-block;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
@@ -75,7 +78,7 @@
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #001f3f;
+            background-color: #1F2937;
             color: #FFFFFF;
         }
         footer p {
@@ -86,7 +89,7 @@
             padding: 2rem;
         }
         .portfolio h2, .testimonials h2 {
-            color: #001f3f;
+            color: #1F2937;
         }
         .project, .testimonial {
             background-color: #FFFFFF;
@@ -95,6 +98,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
         }
         .contact-form {
             background-color: #f9f9f9;
@@ -102,7 +106,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .contact-form h2 {
-            color: #001f3f;
+            color: #1F2937;
         }
         .contact-form form {
             display: flex;
@@ -110,7 +114,7 @@
         }
         .contact-form label {
             margin-bottom: 0.5rem;
-            color: #333;
+            color: #1F2937;
         }
         .contact-form input, .contact-form textarea {
             margin-bottom: 1rem;
@@ -120,7 +124,7 @@
         }
         .contact-form button {
             padding: 0.5rem 1rem;
-            background-color: #2ECC40;
+            background-color: #3B82F6;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -128,7 +132,25 @@
             transition: background-color 0.3s;
         }
         .contact-form button:hover {
-            background-color: #27ae60;
+            background-color: #1F2937;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         @media (max-width: 768px) {
             nav ul {
@@ -214,3 +236,4 @@
     </footer>
 </body>
 </html>
+
