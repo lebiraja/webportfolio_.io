@@ -17,3 +17,29 @@
         transform: rotate(360deg);
     }
 }
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F2F5; /* Light gray background */
+    color: #1F2937;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Adjust sections with white backgrounds */
+section {
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: #FFFFFF; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Adjust sections with light gray backgrounds */
+.portfolio, .testimonials, .contact-form {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 2rem;
+}
+
