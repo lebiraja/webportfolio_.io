@@ -23,3 +23,30 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     event.preventDefault();
     alert('Message sent!');
 });
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Fetch form data
+    const formData = new FormData(this);
+
+    // Send form data to PHP script
+    fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Display success or error message
+        if (data.status === 'success') {
+            alert('Message sent successfully!');
+            // Optionally, clear form fields
+            this.reset();
+        } else {
+            alert('Failed to send message. Please try again later.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again later.');
+    });
+});
