@@ -12,6 +12,7 @@
             background-color: #DDDDDD;
             color: #333;
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
         header {
             background-color: #001f3f;
@@ -34,7 +35,7 @@
         }
         .profile-container {
             position: relative;
-            top: 20px; /* Adjust the position to make the image fully visible */
+            top: 20px;
         }
         nav {
             background-color: #2ECC40;
@@ -80,6 +81,63 @@
         footer p {
             margin: 0;
         }
+        .portfolio, .testimonials {
+            background-color: #f9f9f9;
+            padding: 2rem;
+        }
+        .portfolio h2, .testimonials h2 {
+            color: #001f3f;
+        }
+        .project, .testimonial {
+            background-color: #FFFFFF;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2 {
+            color: #001f3f;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 0.5rem 1rem;
+            background-color: #2ECC40;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #27ae60;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -96,12 +154,14 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Lebi Raja, currently an Artificial Intelligence And Data Science student at Karunya University. With a passion for web development and software engineering, I enjoy working with HTML, CSS, JavaScript, Python, and C++.</p>
+        <p>Hello! I'm Lebi Raja, currently an Artificial Intelligence and Data Science student at Karunya University. With a passion for web development and software engineering, I enjoy working with HTML, CSS, JavaScript, Python, and C++.</p>
     </section>
     <section id="skills">
         <h2>Skills</h2>
@@ -113,13 +173,45 @@
             <li>C++</li>
         </ul>
     </section>
-    <section id="contact">
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of project 1.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of project 2.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Lebi is an exceptional developer with a keen eye for detail."</p>
+            <p>- Person 1</p>
+        </div>
+        <div class="testimonial">
+            <p>"A pleasure to work with, always delivers on time."</p>
+            <p>- Person 2</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+    </section>
+    <section id="contact" class="contact-form">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:lebiraja2007@gmail.com" style="color: #001f3f;">lebiraja2007@example.com</a></p>
-        <p>Phone: <a href="tel:+91 8489195917" style="color: #001f3f;">+91 8489195917</a></p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
     <footer>
         <p>&copy; 2024 Lebi Raja</p>
     </footer>
 </body>
 </html>
+
