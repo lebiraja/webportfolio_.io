@@ -26,11 +26,15 @@
         .profile-pic {
             width: 150px;
             height: 150px;
-            margin: -75px auto 0; /* Brings the profile picture down */
+            margin: 0 auto;
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid #FFFFFF;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .profile-container {
+            position: relative;
+            top: 20px; /* Adjust the position to make the image fully visible */
         }
         nav {
             background-color: #2ECC40;
@@ -80,8 +84,10 @@
 </head>
 <body>
     <header>
-        <div class="profile-pic">
-            <img src="photo.jpg" alt="Lebi Raja">
+        <div class="profile-container">
+            <div class="profile-pic">
+                <img src="photo.jpg" alt="Lebi Raja">
+            </div>
         </div>
         <h1>Lebi Raja</h1>
         <p>Student | Aspiring Developer</p>
